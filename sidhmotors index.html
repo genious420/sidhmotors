@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidh Motors – Premium New & Used Cars in Kharian</title>
+  <meta name="description" content="Buy and sell new & used cars with confidence at Sidh Motors, Kharian. Best prices for Toyota, Honda, Suzuki, Kia, MG and more. Financing available.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sidhmotors.com/">
+  <meta property="og:title" content="Sidh Motors – Premium Car Dealership">
+  <meta property="og:description" content="Premium new & used cars in Kharian, Punjab. Unmatched quality, best prices.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1200">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://sidhmotors.com/">
+  <meta property="twitter:title" content="Sidh Motors">
+  <meta property="twitter:description" content="Premium cars in Kharian.">
+  <meta property="twitter:image" content="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1200">
+
+  <!-- Schema.org structured data for LocalBusiness / CarDealer -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoDealer",
+      "name": "Sidh Motors",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main GT Road",
+        "addressLocality": "Kharian",
+        "addressRegion": "Punjab",
+        "addressCountry": "PK"
+      },
+      "telephone": "+92-302-6269707",
+      "url": "https://sidhmotors.com",
+      "openingHours": "Mo-Sa 09:00-20:00",
+      "priceRange": "PKR 2,500,000 - PKR 50,000,000"
+    }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    .font-display { font-family: 'Playfair Display', serif; }
+    body { background-color: #0A0A0A; color: #FFFFFF; margin: 0; }
+    html { scroll-behavior: smooth; }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #1a1a1a; }
+    ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 4px; }
+
+    .nav-link { transition: color 0.3s; }
+    .nav-link:hover { color: #D4AF37; }
+
+    /* Skeleton loading */
+    .skeleton {
+      background: linear-gradient(90deg, #1e1e1e 25%, #2a2a2a 50%, #1e1e1e 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+    }
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* Modal */
+    .modal-overlay {
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Compare table scroll */
+    .compare-scroll { overflow-x: auto; }
+  </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0B0B0B',
+            secondary: '#FFFFFF',
+            accent: '#D4AF37',
+            'dark-luxury': '#0A0A0A',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark-luxury text-white">
+
+  <!-- ========== Navigation ========== -->
+  <nav id="navbar" class="sticky top-0 z-50 glass border-b border-white/5 px-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between h-16">
+      <a href="#" class="text-2xl font-display font-bold text-accent">Sidh Motors</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#" class="nav-link text-sm font-medium text-white">Home</a>
+        <a href="#inventory" class="nav-link text-sm font-medium text-gray-300">Inventory</a>
+        <a href="#about" class="nav-link text-sm font-medium text-gray-300">About</a>
+        <a href="#services" class="nav-link text-sm font-medium text-gray-300">Services</a>
+        <a href="#contact" class="nav-link text-sm font-medium text-gray-300">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden p-2 text-white"><i data-lucide="menu"></i></button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+      <a href="#" class="block px-4 py-2 text-white hover:text-accent">Home</a>
+      <a href="#inventory" class="block px-4 py-2 text-gray-300 hover:text-accent">Inventory</a>
+      <a href="#about" class="block px-4 py-2 text-gray-300 hover:text-accent">About</a>
+      <a href="#services" class="block px-4 py-2 text-gray-300 hover:text-accent">Services</a>
+      <a href="#contact" class="block px-4 py-2 text-gray-300 hover:text-accent">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ========== Hero ========== -->
+  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center brightness-50"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-dark-luxury via-dark-luxury/80 to-transparent z-10"></div>
+    <div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 animate-fade-in">Discover Your <span class="text-accent">Perfect Drive</span></h1>
+      <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">Premium new & used cars in Kharian. Unmatched quality, best prices, and seamless service.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#inventory" class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-black font-semibold px-8 py-4 rounded-full transition-all"><i data-lucide="search" class="w-5 h-5"></i> Browse Inventory</a>
+        <a href="#contact" class="inline-flex items-center gap-2 border border-white/30 hover:bg-white/10 text-white px-8 py-4 rounded-full transition-all">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Inventory with Filters ========== -->
+  <section id="inventory" class="py-20 px-4 max-w-7xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl md:text-4xl font-display font-bold">Our Inventory</h2>
+      <p class="text-gray-400 mt-3">Find your dream car from our extensive collection</p>
+      <div class="w-20 h-1 bg-accent mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <!-- Filters & Search -->
+    <div class="glass p-6 mb-10 space-y-4">
+      <div class="flex gap-2">
+        <input id="searchInput" type="text" placeholder="Search by name, make, model..." class="flex-1 bg-white/10 border border-white/20 rounded-lg p-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent">
+        <button id="searchBtn" class="bg-accent text-black px-6 py-3 rounded-lg font-semibold hover:bg-accent/90">Search</button>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <select id="filterMake" class="bg-white/10 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:border-accent">
+          <option value="" class="bg-black">All Makes</option>
+          <option value="Toyota" class="bg-black">Toyota</option>
+          <option value="Honda" class="bg-black">Honda</option>
+          <option value="Suzuki" class="bg-black">Suzuki</option>
+          <option value="Kia" class="bg-black">Kia</option>
+          <option value="Hyundai" class="bg-black">Hyundai</option>
+          <option value="MG" class="bg-black">MG</option>
+        </select>
+        <select id="filterFuel" class="bg-white/10 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:border-accent">
+          <option value="" class="bg-black">All Fuel</option>
+          <option value="Petrol" class="bg-black">Petrol</option>
+          <option value="Diesel" class="bg-black">Diesel</option>
+          <option value="Hybrid" class="bg-black">Hybrid</option>
+          <option value="Electric" class="bg-black">Electric</option>
+        </select>
+        <select id="filterTransmission" class="bg-white/10 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:border-accent">
+          <option value="" class="bg-black">All Transmission</option>
+          <option value="Manual" class="bg-black">Manual</option>
+          <option value="Automatic" class="bg-black">Automatic</option>
+        </select>
+        <select id="filterBodyType" class="bg-white/10 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:border-accent">
+          <option value="" class="bg-black">All Body Type</option>
+          <option value="Sedan" class="bg-black">Sedan</option>
+          <option value="SUV" class="bg-black">SUV</option>
+          <option value="Hatchback" class="bg-black">Hatchback</option>
+          <option value="Truck" class="bg-black">Truck</option>
+        </select>
+        <select id="sortBy" class="bg-white/10 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:border-accent">
+          <option value="default" class="bg-black">Sort: Default</option>
+          <option value="lowest" class="bg-black">Price: Low to High</option>
+          <option value="highest" class="bg-black">Price: High to Low</option>
+          <option value="newest" class="bg-black">Newest Year</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Cars Grid -->
+    <div id="carsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Dynamic cards will be injected here -->
+    </div>
+    <div id="noResults" class="hidden text-center text-gray-400 py-20 col-span-full">No cars match your criteria.</div>
+  </section>
+
+  <!-- ========== Why Choose Us ========== -->
+  <section id="about" class="py-20 px-4 max-w-7xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl md:text-4xl font-display font-bold">Why Choose Sidh Motors?</h2>
+      <p class="text-gray-400 mt-3">We deliver excellence</p>
+      <div class="w-20 h-1 bg-accent mx-auto mt-4 rounded-full"></div>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="text-center p-6 glass"><i data-lucide="shield" class="w-10 h-10 text-accent mx-auto mb-4"></i><h3 class="text-xl font-semibold mb-2">Certified Quality</h3><p class="text-gray-400">Every car undergoes rigorous inspection.</p></div>
+      <div class="text-center p-6 glass"><i data-lucide="thumbs-up" class="w-10 h-10 text-accent mx-auto mb-4"></i><h3 class="text-xl font-semibold mb-2">Trusted Dealer</h3><p class="text-gray-400">Over 500 happy customers in Kharian.</p></div>
+      <div class="text-center p-6 glass"><i data-lucide="dollar-sign" class="w-10 h-10 text-accent mx-auto mb-4"></i><h3 class="text-xl font-semibold mb-2">Best Prices</h3><p class="text-gray-400">Competitive pricing with easy financing.</p></div>
+      <div class="text-center p-6 glass"><i data-lucide="headphones" class="w-10 h-10 text-accent mx-auto mb-4"></i><h3 class="text-xl font-semibold mb-2">After-Sales Support</h3><p class="text-gray-400">Dedicated support for your peace of mind.</p></div>
+    </div>
+  </section>
+
+  <!-- ========== Services ========== -->
+  <section id="services" class="py-20 bg-primary">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-10"><h2 class="text-3xl md:text-4xl font-display font-bold">Our Services</h2><div class="w-20 h-1 bg-accent mx-auto mt-4 rounded-full"></div></div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-8 glass"><i data-lucide="car" class="w-12 h-12 text-accent mx-auto mb-4"></i><h3 class="text-xl font-semibold mb-2">Car Buying</h3><p class="text-gray-400">Wide selection of new & used cars.</p></div>
+        <div class="text-center p-8 glass"><i data-lucide="credit-card" class="w-12 h-12 text-accent mx-auto mb-4"></i><h3 class="text-xl font-semibold mb-2">Financing</h3><p class="text-gray-400">Easy installment plans available.</p></div>
+        <div class="text-center p-8 glass"><i data-lucide="shield-check" class="w-12 h-12 text-accent mx-auto mb-4"></i><h3 class="text-xl font-semibold mb-2">Warranty</h3><p class="text-gray-400">Extended warranty options.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Testimonials ========== -->
+  <section class="py-20 px-4 max-w-7xl mx-auto">
+    <div class="text-center mb-10"><h2 class="text-3xl md:text-4xl font-display font-bold">What Our Customers Say</h2><div class="w-20 h-1 bg-accent mx-auto mt-4 rounded-full"></div></div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="glass p-6 text-center"><div class="flex justify-center gap-1 mb-4"><i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i><i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i><i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i><i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i><i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i></div><p class="text-gray-300 italic">"Best car buying experience! Highly recommended."</p><p class="mt-4 font-semibold">Ali Raza</p></div>
+      <div class="glass p-6 text-center"><div class="flex justify-center gap-1 mb-4"><i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i><i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i><i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i><i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i><i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i></div><p class="text-gray-300 italic">"Fair prices and excellent after sales service."</p><p class="mt-4 font-semibold">Sara Khan</p></div>
+      <div class="glass p-6 text-center"><div class="flex justify-center gap-1 mb-4"><i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i><i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i><i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i><i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i><i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i></div><p class="text-gray-300 italic">"Smooth process, got my dream car."</p><p class="mt-4 font-semibold">Usman Ali</p></div>
+    </div>
+  </section>
+
+  <!-- ========== Statistics ========== -->
+  <section class="py-20 bg-primary">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-10"><h2 class="text-3xl md:text-4xl font-display font-bold">By The Numbers</h2><div class="w-20 h-1 bg-accent mx-auto mt-4 rounded-full"></div></div>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="glass p-8"><p class="text-4xl font-bold text-accent counter" data-target="500">0</p><p class="text-gray-300 mt-2">Cars Sold</p></div>
+        <div class="glass p-8"><p class="text-4xl font-bold text-accent counter" data-target="98">0%</p><p class="text-gray-300 mt-2">Client Satisfaction</p></div>
+        <div class="glass p-8"><p class="text-4xl font-bold text-accent counter" data-target="15">0</p><p class="text-gray-300 mt-2">Years Experience</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="py-20 bg-accent text-black text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Ready to Find Your Car?</h2>
+      <p class="mb-8 text-black/80">Browse our latest inventory or contact us for a test drive.</p>
+      <a href="#inventory" class="inline-block bg-black text-accent font-semibold px-8 py-4 rounded-full hover:bg-gray-900 transition">View Inventory</a>
+    </div>
+  </section>
+
+  <!-- ========== Contact ========== -->
+  <section id="contact" class="py-20 px-4 max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-16">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">Contact Us</h2>
+        <p class="text-gray-300 mb-8">We're here to help. Reach out via phone, WhatsApp, or visit our showroom.</p>
+        <div class="space-y-6">
+          <a href="tel:+923026269707" class="flex items-center gap-3 text-accent hover:underline"><i data-lucide="phone" class="w-5 h-5"></i> +92 302 6269707</a>
+          <a href="https://wa.me/923026269707" target="_blank" class="flex items-center gap-3 text-green-400 hover:underline"><i data-lucide="message-circle" class="w-5 h-5"></i> WhatsApp Chat</a>
+          <div class="flex items-start gap-3 text-gray-300"><i data-lucide="map-pin" class="w-5 h-5 mt-1"></i><span>Main GT Road, Kharian, Punjab, Pakistan</span></div>
+          <div class="flex items-center gap-3 text-gray-300"><i data-lucide="clock" class="w-5 h-5"></i><div>Mon - Sat: 9:00 AM – 8:00 PM<br>Sun: 11:00 AM – 5:00 PM</div></div>
+        </div>
+        <div class="mt-10 h-64 rounded-xl overflow-hidden">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26674.98379873934!2d73.865!3d32.816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f90d5c4e4e0b5%3A0xdb27e2b9b95f8f9!2sKharian%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000" width="100%" height="100%" style="border:0; filter: grayscale(100%)" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="glass p-8 rounded-2xl">
+        <h3 class="text-2xl font-semibold mb-4">Send us a Message</h3>
+        <form id="contactForm" class="space-y-4">
+          <input type="text" placeholder="Full Name" required class="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent">
+          <input type="email" placeholder="Email (optional)" class="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent">
+          <input type="tel" placeholder="Phone" required class="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent">
+          <textarea placeholder="How can we help?" rows="4" required class="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-white placeholder-gray-400 focus:outline-none focus:border-accent"></textarea>
+          <button type="submit" class="w-full bg-accent hover:bg-accent/90 text-black font-semibold py-3 rounded-lg transition">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary border-t border-white/10 py-12">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+      <div><h4 class="text-xl font-display text-accent mb-4">Sidh Motors</h4><p class="text-gray-400">Premium new & used cars in Kharian. Quality you can trust.</p></div>
+      <div><h5 class="font-semibold mb-3">Quick Links</h5><div class="flex flex-col gap-2 text-gray-300"><a href="#inventory">Inventory</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#contact">Contact</a></div></div>
+      <div><h5 class="font-semibold mb-3">Contact</h5><div class="space-y-2 text-gray-300"><div class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> +92 302 6269707</div><div class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Main GT Road, Kharian</div></div></div>
+    </div>
+    <div class="text-center text-gray-500 text-sm mt-10">© 2026 Sidh Motors. All rights reserved.</div>
+  </footer>
+
+  <!-- ========== Floating WhatsApp ========== -->
+  <a href="https://wa.me/923026269707" target="_blank" class="fixed bottom-6 right-6 z-50 p-4 bg-green-500 hover:bg-green-600 rounded-full shadow-lg shadow-green-500/25 transition-colors"><i data-lucide="message-circle" class="w-6 h-6 text-white"></i></a>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="fixed bottom-24 right-6 z-50 p-3 bg-accent/80 hover:bg-accent rounded-full hidden"><i data-lucide="chevron-up" class="w-5 h-5 text-black"></i></button>
+
+  <!-- ========== Car Detail Modal ========== -->
+  <div id="carModal" class="fixed inset-0 z-[60] flex items-center justify-center hidden modal-overlay">
+    <div class="glass max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto p-6 relative">
+      <button id="closeModal" class="absolute top-4 right-4 text-white hover:text-accent"><i data-lucide="x" class="w-6 h-6"></i></button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ========== Compare Modal ========== -->
+  <div id="compareModal" class="fixed inset-0 z-[70] flex items-center justify-center hidden modal-overlay">
+    <div class="glass max-w-5xl w-full mx-4 max-h-[90vh] overflow-y-auto p-6 relative">
+      <button id="closeCompare" class="absolute top-4 right-4 text-white hover:text-accent"><i data-lucide="x" class="w-6 h-6"></i></button>
+      <h3 class="text-2xl font-semibold mb-6">Compare Cars</h3>
+      <div id="compareContent" class="compare-scroll"></div>
+    </div>
+  </div>
+
+  <!-- Wishlist sidebar toggle? We'll show a button -->
+  <div id="wishlistSidebar" class="fixed top-20 right-0 z-40 hidden md:block">
+    <button id="wishlistToggle" class="glass p-3 rounded-l-xl bg-accent/10 hover:bg-accent/20">
+      <i data-lucide="heart" class="w-5 h-5 text-accent"></i>
+      <span id="wishlistCount" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+    </button>
+  </div>
+
+  <!-- Wishlist dropdown -->
+  <div id="wishlistDropdown" class="hidden fixed top-16 right-16 z-50 glass w-80 max-h-96 overflow-y-auto p-4">
+    <h4 class="font-semibold mb-3">Wishlist</h4>
+    <div id="wishlistItems"></div>
+    <button id="clearWishlist" class="mt-4 text-red-400 text-sm hover:underline">Clear all</button>
+  </div>
+
+  <script>
+    // ==================== DATA ====================
+    const cars = [
+      { id: 1, title:"Toyota Corolla 2022 1.6 Altis X", make:"Toyota", model:"Corolla", year:2022, price:5850000, mileage:35000, fuel:"Petrol", transmission:"Automatic", bodyType:"Sedan", color:"White", engine:"1.6L", features:["Airbags","ABS","Leather Seats","Sunroof"], images:["https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600","https://images.unsplash.com/photo-1550355291-bbee04a92027?w=600","https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600"] },
+      { id: 2, title:"Honda Civic 2021 Oriel 1.5 Turbo", make:"Honda", model:"Civic", year:2021, price:7250000, mileage:28000, fuel:"Petrol", transmission:"Automatic", bodyType:"Sedan", color:"Black", engine:"1.5L Turbo", features:["Sunroof","Lane Watch","Push Start"], images:["https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600","https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600","https://images.unsplash.com/photo-1550355291-bbee04a92027?w=600"] },
+      { id: 3, title:"Suzuki Alto 2023 VXL AGS", make:"Suzuki", model:"Alto", year:2023, price:2750000, mileage:12000, fuel:"Petrol", transmission:"Automatic", bodyType:"Hatchback", color:"Silver", engine:"660cc", features:["Power Windows","ABS","Airbags"], images:["https://images.unsplash.com/photo-1550355291-bbee04a92027?w=600"] },
+      { id: 4, title:"Toyota Prado 2020 TX-L", make:"Toyota", model:"Prado", year:2020, price:21000000, mileage:65000, fuel:"Diesel", transmission:"Automatic", bodyType:"SUV", color:"White", engine:"2.8L Diesel", features:["4x4","Leather","Cool Box"], images:["https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600","https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600"] },
+      { id: 5, title:"Kia Sportage 2023 AWD", make:"Kia", model:"Sportage", year:2023, price:8500000, mileage:8000, fuel:"Petrol", transmission:"Automatic", bodyType:"SUV", color:"Blue", engine:"2.0L", features:["AWD","Sunroof","360 Camera"], images:["https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600"] },
+      { id: 6, title:"Suzuki Swift 2022 GLX CVT", make:"Suzuki", model:"Swift", year:2022, price:3950000, mileage:18000, fuel:"Petrol", transmission:"Automatic", bodyType:"Hatchback", color:"Red", engine:"1.2L", features:["ABS","Dual Airbags","Touchscreen"], images:["https://images.unsplash.com/photo-1550355291-bbee04a92027?w=600"] },
+      { id: 7, title:"Honda City 2021 1.2L CVT", make:"Honda", model:"City", year:2021, price:4850000, mileage:22000, fuel:"Petrol", transmission:"Automatic", bodyType:"Sedan", color:"White", engine:"1.2L", features:["CVT","Eco Assist","Keyless Entry"], images:["https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600"] },
+      { id: 8, title:"Toyota Yaris 2022 1.3 CVT", make:"Toyota", model:"Yaris", year:2022, price:4150000, mileage:15000, fuel:"Petrol", transmission:"Automatic", bodyType:"Sedan", color:"Silver", engine:"1.3L", features:["Airbags","ABS","Rear Camera"], images:["https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600"] },
+      { id: 9, title:"Suzuki Cultus 2022 VXL", make:"Suzuki", model:"Cultus", year:2022, price:3250000, mileage:14000, fuel:"Petrol", transmission:"Manual", bodyType:"Hatchback", color:"Grey", engine:"1.0L", features:["Power Steering","Air Conditioner"], images:["https://images.unsplash.com/photo-1550355291-bbee04a92027?w=600"] },
+      { id: 10, title:"Toyota Hilux 2021 Revo", make:"Toyota", model:"Hilux", year:2021, price:13500000, mileage:45000, fuel:"Diesel", transmission:"Manual", bodyType:"Truck", color:"Black", engine:"2.8L", features:["4x4","Tow Hitch"], images:["https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600"] },
+      { id: 11, title:"Hyundai Tucson 2023 GLS", make:"Hyundai", model:"Tucson", year:2023, price:8200000, mileage:5000, fuel:"Petrol", transmission:"Automatic", bodyType:"SUV", color:"White", engine:"2.0L", features:["Panoramic Roof","Wireless Charger"], images:["https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600"] },
+      { id: 12, title:"MG HS 2022 Essence", make:"MG", model:"HS", year:2022, price:7200000, mileage:18000, fuel:"Petrol", transmission:"Automatic", bodyType:"SUV", color:"Red", engine:"1.5L Turbo", features:["Leather","Bose Audio"], images:["https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600"] },
+      { id: 13, title:"Suzuki Wagon R 2023 VXL", make:"Suzuki", model:"Wagon R", year:2023, price:2850000, mileage:8000, fuel:"Petrol", transmission:"Automatic", bodyType:"Hatchback", color:"Brown", engine:"1.0L", features:["Keyless Entry","Infotainment"], images:["https://images.unsplash.com/photo-1550355291-bbee04a92027?w=600"] },
+      { id: 14, title:"Kia Stonic 2022 EX", make:"Kia", model:"Stonic", year:2022, price:4900000, mileage:20000, fuel:"Petrol", transmission:"Automatic", bodyType:"SUV", color:"Yellow", engine:"1.4L", features:["Sunroof","17' Alloys"], images:["https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600"] },
+      { id: 15, title:"Honda BR-V 2021 S", make:"Honda", model:"BR-V", year:2021, price:5100000, mileage:32000, fuel:"Petrol", transmission:"Automatic", bodyType:"SUV", color:"Silver", engine:"1.5L", features:["7-Seater","Magic Seats"], images:["https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600"] },
+      { id: 16, title:"Toyota Fortuner 2020 Sigma", make:"Toyota", model:"Fortuner", year:2020, price:16500000, mileage:55000, fuel:"Diesel", transmission:"Automatic", bodyType:"SUV", color:"White", engine:"2.8L", features:["4x4","Leather"], images:["https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600"] },
+      { id: 17, title:"Suzuki Bolan 2023", make:"Suzuki", model:"Bolan", year:2023, price:1550000, mileage:2000, fuel:"Petrol", transmission:"Manual", bodyType:"Truck", color:"White", engine:"800cc", features:["Economical"], images:["https://images.unsplash.com/photo-1550355291-bbee04a92027?w=600"] },
+      { id: 18, title:"Hyundai Elantra 2022 GL", make:"Hyundai", model:"Elantra", year:2022, price:5500000, mileage:10000, fuel:"Petrol", transmission:"Automatic", bodyType:"Sedan", color:"Blue", engine:"2.0L", features:["Digital Cluster","Wireless CarPlay"], images:["https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600"] },
+      { id: 19, title:"MG ZS 2021 Excite", make:"MG", model:"ZS", year:2021, price:4300000, mileage:25000, fuel:"Petrol", transmission:"Automatic", bodyType:"SUV", color:"Black", engine:"1.5L", features:["Panoramic Roof"], images:["https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600"] },
+      { id: 20, title:"Toyota Corolla Cross 2023", make:"Toyota", model:"Corolla Cross", year:2023, price:8900000, mileage:3000, fuel:"Hybrid", transmission:"Automatic", bodyType:"SUV", color:"Silver", engine:"1.8L Hybrid", features:["Hybrid","TSS","Leather"], images:["https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600"] }
+    ];
+
+    // ==================== STATE ====================
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    let compareList = [];
+
+    // ==================== UTILS ====================
+    function formatPrice(p) { return 'PKR ' + new Intl.NumberFormat('en-PK').format(p); }
+
+    // ==================== RENDER INVENTORY ====================
+    function renderCars(carList) {
+      const grid = document.getElementById('carsGrid');
+      const noResults = document.getElementById('noResults');
+      grid.innerHTML = '';
+      if (!carList.length) {
+        noResults.classList.remove('hidden');
+        return;
+      }
+      noResults.classList.add('hidden');
+      carList.forEach(car => {
+        const card = document.createElement('div');
+        card.className = 'glass overflow-hidden group hover:shadow-2xl hover:shadow-accent/10 transition-all duration-500 cursor-pointer';
+        card.innerHTML = `
+          <div class="relative aspect-[4/3] overflow-hidden" onclick="openCarDetail(${car.id})">
+            <img src="${car.images[0]}" alt="${car.title}" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
+            <span class="absolute top-3 left-3 bg-accent text-black text-xs font-bold px-3 py-1 rounded-full">${car.year}</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-semibold truncate">${car.title}</h3>
+            <div class="flex items-center gap-2 mt-2 text-gray-400 text-sm">
+              <span>${car.year}</span><span>•</span><span>${car.mileage.toLocaleString()} km</span><span>•</span><span>${car.fuel}</span><span>•</span><span>${car.transmission}</span>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+              <p class="text-2xl font-bold text-accent">${formatPrice(car.price)}</p>
+              <div class="flex gap-2">
+                <button onclick="toggleWishlist(${car.id}); event.stopPropagation();" class="p-2 bg-white/10 rounded-full hover:bg-accent/20 transition">
+                  <i id="heart-${car.id}" class="w-5 h-5 ${wishlist.includes(car.id) ? 'text-red-500 fill-red-500' : 'text-white'}"></i>
+                </button>
+                <a href="https://wa.me/923026269707?text=I'm%20interested%20in%20${encodeURIComponent(car.title)}" target="_blank" onclick="event.stopPropagation()" class="p-2 bg-green-600 hover:bg-green-700 rounded-full">
+                  <i data-lucide="message-circle" class="w-5 h-5 text-white"></i>
+                </a>
+              </div>
+            </div>
+            <div class="flex gap-2 mt-4">
+              <button onclick="openCarDetail(${car.id})" class="flex-1 bg-accent/10 hover:bg-accent/20 text-accent border border-accent/30 rounded-lg py-2 text-sm flex items-center justify-center gap-1">
+                <i data-lucide="eye" class="w-4 h-4"></i> Details
+              </button>
+              <button onclick="addToCompare(${car.id}); event.stopPropagation();" class="bg-white/10 hover:bg-white/20 rounded-lg py-2 px-3 text-sm">
+                <i data-lucide="git-compare" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+      lucide.createIcons(); // refresh icons
+      updateWishlistUI();
+    }
+
+    // Initial render
+    renderCars(cars);
+
+    // ==================== FILTER & SEARCH ====================
+    function filterCars() {
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      const make = document.getElementById('filterMake').value;
+      const fuel = document.getElementById('filterFuel').value;
+      const trans = document.getElementById('filterTransmission').value;
+      const body = document.getElementById('filterBodyType').value;
+      const sort = document.getElementById('sortBy').value;
+
+      let filtered = cars.filter(car => {
+        if (search && !car.title.toLowerCase().includes(search) && !car.make.toLowerCase().includes(search) && !car.model.toLowerCase().includes(search)) return false;
+        if (make && car.make !== make) return false;
+        if (fuel && car.fuel !== fuel) return false;
+        if (trans && car.transmission !== trans) return false;
+        if (body && car.bodyType !== body) return false;
+        return true;
+      });
+
+      if (sort === 'lowest') filtered.sort((a,b) => a.price - b.price);
+      else if (sort === 'highest') filtered.sort((a,b) => b.price - a.price);
+      else if (sort === 'newest') filtered.sort((a,b) => b.year - a.year);
+
+      renderCars(filtered);
+    }
+
+    document.getElementById('searchInput').addEventListener('input', filterCars);
+    document.getElementById('searchBtn').addEventListener('click', filterCars);
+    document.getElementById('filterMake').addEventListener('change', filterCars);
+    document.getElementById('filterFuel').addEventListener('change', filterCars);
+    document.getElementById('filterTransmission').addEventListener('change', filterCars);
+    document.getElementById('filterBodyType').addEventListener('change', filterCars);
+    document.getElementById('sortBy').addEventListener('change', filterCars);
+
+    // ==================== WISHLIST ====================
+    function toggleWishlist(id) {
+      if (wishlist.includes(id)) wishlist = wishlist.filter(wid => wid !== id);
+      else wishlist.push(id);
+      localStorage.setItem('wishlist', JSON.stringify(wishlist));
+      updateWishlistUI();
+      renderCars(filterCurrent()); // re-render to update heart icons
+    }
+
+    function updateWishlistUI() {
+      document.getElementById('wishlistCount').textContent = wishlist.length;
+      const heartIcons = document.querySelectorAll('[id^="heart-"]');
+      heartIcons.forEach(icon => {
+        const id = parseInt(icon.id.split('-')[1]);
+        if (wishlist.includes(id)) {
+          icon.classList.add('text-red-500', 'fill-red-500');
+          icon.classList.remove('text-white');
+        } else {
+          icon.classList.remove('text-red-500', 'fill-red-500');
+          icon.classList.add('text-white');
+        }
+      });
+      // update dropdown
+      const itemsDiv = document.getElementById('wishlistItems');
+      itemsDiv.innerHTML = wishlist.length === 0 ? '<p class="text-gray-400">No cars saved.</p>' : wishlist.map(wid => {
+        const car = cars.find(c => c.id === wid);
+        return car ? `<div class="flex items-center justify-between py-2 border-b border-white/10"><span>${car.title}</span><button onclick="toggleWishlist(${car.id})" class="text-red-400 text-xs">Remove</button></div>` : '';
+      }).join('');
+    }
+
+    document.getElementById('wishlistToggle').addEventListener('click', () => {
+      document.getElementById('wishlistDropdown').classList.toggle('hidden');
+    });
+    document.getElementById('clearWishlist').addEventListener('click', () => {
+      wishlist = [];
+      localStorage.setItem('wishlist', JSON.stringify(wishlist));
+      updateWishlistUI();
+      renderCars(filterCurrent());
+    });
+
+    // Helper to re-apply current filters
+    function filterCurrent() {
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      const make = document.getElementById('filterMake').value;
+      const fuel = document.getElementById('filterFuel').value;
+      const trans = document.getElementById('filterTransmission').value;
+      const body = document.getElementById('filterBodyType').value;
+      return cars.filter(car => {
+        if (search && !car.title.toLowerCase().includes(search) && !car.make.toLowerCase().includes(search) && !car.model.toLowerCase().includes(search)) return false;
+        if (make && car.make !== make) return false;
+        if (fuel && car.fuel !== fuel) return false;
+        if (trans && car.transmission !== trans) return false;
+        if (body && car.bodyType !== body) return false;
+        return true;
+      });
+    }
+
+    // ==================== COMPARE ====================
+    function addToCompare(id) {
+      if (compareList.includes(id)) {
+        compareList = compareList.filter(cid => cid !== id);
+      } else {
+        if (compareList.length >= 3) { alert('You can compare up to 3 cars.'); return; }
+        compareList.push(id);
+      }
+      updateCompareButton();
+    }
+
+    function updateCompareButton() {
+      const btn = document.getElementById('compareTrigger');
+      if (compareList.length > 0) btn.classList.remove('hidden');
+      else btn.classList.add('hidden');
+    }
+
+    document.getElementById('compareTrigger')?.addEventListener('click', showCompareModal);
+
+    function showCompareModal() {
+      const modal = document.getElementById('compareModal');
+      const content = document.getElementById('compareContent');
+      const selectedCars = compareList.map(id => cars.find(c => c.id === id)).filter(Boolean);
+      if (!selectedCars.length) return;
+
+      let tableHTML = '<table class="w-full text-sm"><thead><tr><th class="p-2 text-left">Specification</th>';
+      selectedCars.forEach(car => tableHTML += `<th class="p-2 text-left">${car.title}</th>`);
+      tableHTML += '</tr></thead><tbody>';
+
+      const specs = ['make','model','year','price','mileage','fuel','transmission','bodyType','color','engine'];
+      specs.forEach(spec => {
+        tableHTML += '<tr class="border-t border-white/10">';
+        tableHTML += `<td class="p-2 capitalize">${spec}</td>`;
+        selectedCars.forEach(car => {
+          let val = car[spec];
+          if (spec === 'price') val = formatPrice(val);
+          tableHTML += `<td class="p-2">${val}</td>`;
+        });
+        tableHTML += '</tr>';
+      });
+      tableHTML += '</tbody></table>';
+      content.innerHTML = tableHTML;
+      modal.classList.remove('hidden');
+    }
+
+    document.getElementById('closeCompare').addEventListener('click', () => {
+      document.getElementById('compareModal').classList.add('hidden');
+    });
+
+    // ==================== CAR DETAIL MODAL ====================
+    function openCarDetail(id) {
+      const car = cars.find(c => c.id === id);
+      if (!car) return;
+      const modal = document.getElementById('carModal');
+      const content = document.getElementById('modalContent');
+      
+      let imagesHTML = '';
+      if (car.images.length > 1) {
+        imagesHTML = `
+          <div class="relative">
+            <div class="aspect-video overflow-hidden rounded-xl" id="modalSlider">
+              <img src="${car.images[0]}" class="w-full h-full object-cover" id="modalMainImg">
+            </div>
+            <div class="flex gap-2 mt-2">
+              ${car.images.map((img,i) => `<img src="${img}" class="w-20 h-16 object-cover rounded cursor-pointer ${i===0?'border-2 border-accent':''}" onclick="document.getElementById('modalMainImg').src='${img}'; this.parentElement.querySelectorAll('img').forEach(el=>el.classList.remove('border-accent')); this.classList.add('border-accent');">`).join('')}
+            </div>
+          </div>`;
+      } else {
+        imagesHTML = `<img src="${car.images[0]}" class="w-full h-64 object-cover rounded-xl">`;
+      }
+
+      content.innerHTML = `
+        ${imagesHTML}
+        <div class="mt-6">
+          <h2 class="text-2xl md:text-3xl font-display font-bold">${car.title}</h2>
+          <p class="text-3xl text-accent font-bold mt-2">${formatPrice(car.price)}</p>
+          <div class="grid grid-cols-2 gap-4 mt-4">
+            <div><span class="text-gray-400">Make:</span> ${car.make}</div>
+            <div><span class="text-gray-400">Model:</span> ${car.model}</div>
+            <div><span class="text-gray-400">Year:</span> ${car.year}</div>
+            <div><span class="text-gray-400">Mileage:</span> ${car.mileage.toLocaleString()} km</div>
+            <div><span class="text-gray-400">Fuel:</span> ${car.fuel}</div>
+            <div><span class="text-gray-400">Transmission:</span> ${car.transmission}</div>
+            <div><span class="text-gray-400">Body Type:</span> ${car.bodyType}</div>
+            <div><span class="text-gray-400">Color:</span> ${car.color}</div>
+            <div><span class="text-gray-400">Engine:</span> ${car.engine}</div>
+          </div>
+          <div class="mt-6"><h4 class="font-semibold mb-2">Features</h4><ul class="list-disc list-inside text-gray-300">${car.features.map(f=>`<li>${f}</li>`).join('')}</ul></div>
+          <div class="flex gap-4 mt-8">
+            <a href="https://wa.me/923026269707?text=I'm%20interested%20in%20${encodeURIComponent(car.title)}" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg text-center font-semibold">WhatsApp Inquiry</a>
+            <a href="tel:+923026269707" class="flex-1 bg-accent hover:bg-accent/90 text-black py-3 rounded-lg text-center font-semibold">Call Now</a>
+          </div>
+        </div>
+      `;
+      modal.classList.remove('hidden');
+    }
+
+    document.getElementById('closeModal').addEventListener('click', () => {
+      document.getElementById('carModal').classList.add('hidden');
+    });
+    document.getElementById('carModal').addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) document.getElementById('carModal').classList.add('hidden');
+    });
+
+    // ==================== FINANCE CALCULATOR (simple) ====================
+    function calculateEMI(price, downPayment, months, interestRate = 12) {
+      const principal = price - downPayment;
+      const monthlyRate = interestRate / 100 / 12;
+      const emi = (principal * monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+      return Math.round(emi);
+    }
+    // Expose globally
+    window.calculateAndShowEMI = function(price) {
+      const down = prompt("Enter down payment (PKR):", "1000000");
+      const months = prompt("Loan duration (months):", "36");
+      if (!down || !months) return;
+      const emi = calculateEMI(price, parseInt(down), parseInt(months));
+      alert(`Monthly Installment: ${formatPrice(emi)} for ${months} months.`);
+    };
+
+    // ==================== CONTACT FORM ====================
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you! We will contact you shortly.');
+      this.reset();
+    });
+
+    // ==================== BACK TO TOP ====================
+    const backBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backBtn.classList.toggle('hidden', window.scrollY <= 300);
+    });
+    backBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+    // ==================== MOBILE MENU ====================
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // ==================== COUNTER ANIMATION ====================
+    const counters = document.querySelectorAll('.counter');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = +counter.getAttribute('data-target');
+          const suffix = counter.textContent.includes('%') ? '%' : '';
+          const duration = 2000;
+          const start = performance.now();
+          const update = (now) => {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            counter.textContent = Math.floor(progress * target) + suffix;
+            if (progress < 1) requestAnimationFrame(update);
+            else counter.textContent = target + suffix;
+          };
+          requestAnimationFrame(update);
+          observer.unobserve(counter);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => observer.observe(c));
+
+    // Initial icon create
+    lucide.createIcons();
+    // Add compare trigger button in DOM (we'll place it below the grid)
+    const compareBtn = document.createElement('button');
+    compareBtn.id = 'compareTrigger';
+    compareBtn.className = 'hidden fixed bottom-24 left-6 z-50 glass p-3 rounded-full bg-accent/20 hover:bg-accent/40';
+    compareBtn.innerHTML = '<i data-lucide="git-compare" class="w-5 h-5 text-accent"></i>';
+    document.body.appendChild(compareBtn);
+    lucide.createIcons();
+
+    updateCompareButton();
+  </script>
+
+  <style>
+    .animate-fade-in { animation: fadeIn 1s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</body>
+</html>
