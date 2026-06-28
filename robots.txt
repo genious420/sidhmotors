@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://genious420.github.io/sidhmotors/sitemap.xml
